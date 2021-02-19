@@ -11,7 +11,7 @@ def draw_mondrian(width, height, color_nums, step=10):
       colornums: a dictionary built from the analysis of an existing mondrian image. Pixels were analysed to find colour and width of rectangles'''
     header = f'<svg viewBox="0 0 {width} {height}" xmlns="http://www.w3.org/2000/svg">\n'
     print(header)
-    colors = color_nums.keys()
+    colors = list(color_nums.keys())
     for y in range(0, height, step):
       x = 0
       while x < width:
